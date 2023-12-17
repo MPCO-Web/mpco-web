@@ -9,7 +9,6 @@ module.exports = {
 		'airbnb-typescript',
 		'airbnb/hooks',
 		'prettier',
-		'plugin:jest/recommended',
 		'plugin:prettier/recommended',
 		'plugin:@typescript-eslint/recommended',
 		'plugin:react/recommended',
@@ -18,7 +17,7 @@ module.exports = {
 		'plugin:import/errors',
 		'plugin:import/warnings',
 	],
-	plugins: ['jest', 'prettier', '@typescript-eslint', 'react', 'react-hooks', 'jsx-a11y', 'import'],
+	plugins: ['prettier', '@typescript-eslint', 'react', 'react-hooks', 'jsx-a11y', 'import'],
 	rules: {
 		'prettier/prettier': ['error'],
 		'no-param-reassign': ['error', { props: false }],
