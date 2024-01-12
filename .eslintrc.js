@@ -48,6 +48,7 @@ module.exports = {
 			2,
 			{ namedComponents: ['arrow-function', 'function-declaration'] },
 		],
+		'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
 	},
 	ignorePatterns: ['build/**', 'dist/**', 'node_modules/', '/*.js'],
 };
