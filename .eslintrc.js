@@ -42,7 +42,7 @@ module.exports = {
 		},
 	],
 	rules: {
-		'prettier/prettier': ['error'],
+		'prettier/prettier': ['error', { endOfLine: 'auto' }],
 		'no-param-reassign': ['error', { props: false }],
 		'react/function-component-definition': [
 			2,
