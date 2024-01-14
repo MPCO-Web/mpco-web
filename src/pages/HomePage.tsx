@@ -14,7 +14,7 @@ const HomePage = () => {
 			`}
 		>
 			<h1
-				className="
+				className="wd
 				text-4xl
 				text-center
 				text-blue-500
