@@ -13,6 +13,12 @@ module.exports = {
 			return webpackConfig;
 		},
 	},
+	babel: {
+		plugins: [
+			['@emotion/babel-plugin', { jsxImportSource: '@emotion/react' }],
+			'babel-plugin-macros',
+		],
+	},
 	plugins: [
 		{
 			plugin: CracoAlias,
