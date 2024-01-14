@@ -44,6 +44,22 @@ module.exports = {
 		},
 	],
 	rules: {
+		'import/order': [
+			'error',
+			{
+				groups: ['builtin', 'external', 'internal', ['parent', 'sibling', 'index']],
+				alphabetize: { order: 'asc' },
+				pathGroups: [
+					{
+						pattern: '{react*/**,react*,react}',
+						group: 'builtin',
+						position: 'before',
+					},
+				],
+				pathGroupsExcludedImportTypes: ['react', 'builtin', 'index'],
+				'newlines-between': 'always',
+			},
+		],
 		'prettier/prettier': ['error', { endOfLine: 'auto' }],
 		'no-param-reassign': ['error', { props: false }],
 		'react/function-component-definition': [

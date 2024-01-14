@@ -1,7 +1,6 @@
-/** @jsxImportSource @emotion/react */
-import { css } from '@emotion/css';
-
 import React from 'react';
+
+import { css } from '@emotion/css';
 
 const HomePage = () => {
 	// tailwindcss classes
