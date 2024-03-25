@@ -16,7 +16,7 @@
 		"@mui/material": "^5.15.4",
 		"@types/node": "^16.7.13",
 		"@types/react": "^18.0.0",
-		"@types/reactyar-dom": "^18.0.0",
+		"@types/react-dom": "^18.0.0",
 		"craco-alias": "^3.0.1",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
