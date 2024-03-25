@@ -3,134 +3,186 @@ import React from 'react';
 import { css } from '@emotion/css';
 import { Button } from '@mui/material';
 
-import ServiceCard from '@components/ServiceCard';
 import WhatWeDoCard from '@components/WhatWeDoCard';
 
 const HomePage = () => {
 	// tailwindcss classes
 
 	return (
-		<div>
-			{/* main nav */}
-			<nav
+		<>
+			<header>
+				{/* main nav */}
+				<nav
+					className={css`
+						display: flex;
+						justify-content: space-between;
+						align-items: center;
+						max-width: 940px;
+						margin-left: auto;
+						margin-right: auto;
+						height: 60px;
+					`}
+				>
+					<div>mpco</div>
+					<div>
+						<Button>버튼1</Button>
+						<Button>버튼2</Button>
+					</div>
+				</nav>
+			</header>
+			<main>
+				{/* main banner */}
+				<section>
+					<div
+						className={css`
+							display: flex;
+							width: 100%;
+							height: 600px;
+							justify-content: center;
+							align-items: center;
+							background-color: gray;
+						`}
+					>
+						<div>
+							<div>
+								<h1>This is velocity</h1>
+							</div>
+							<div>
+								<h3>A FREE RESPONSIVE TEMPLATE</h3>
+							</div>
+							<div
+								className={css`
+									display: flex;
+								`}
+							>
+								<Button>Get Started</Button>
+								<Button>Learn More</Button>
+							</div>
+						</div>
+					</div>
+				</section>
+				{/* card section */}
+				<section>
+					<div
+						className={css`
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							width: 100%;
+							height: 580px;
+							background-color: orange;
+							padding: 80px 10px;
+						`}
+					>
+						<div
+							className={css`
+								display: flex;
+								justify-content: center;
+								align-items: center;
+								flex-direction: column;
+								width: 940px;
+							`}
+						>
+							<h2>what we do</h2>
+							<h5>this is text</h5>
+							<div
+								className={css`
+									display: flex;
+									background-color: white;
+								`}
+							>
+								<WhatWeDoCard />
+								<WhatWeDoCard />
+								<WhatWeDoCard />
+								<WhatWeDoCard />
+							</div>
+						</div>
+					</div>
+				</section>
+				{/* service section */}
+				<section>
+					<div
+						className={css`
+							width: 100%;
+							height: 820px;
+							display: flex;
+							justify-content: center;
+							padding: 80px 10px;
+						`}
+					>
+						<div
+							className={css`
+								display: flex;
+								width: 1080px;
+								height: 100%;
+								justify-content: center;
+								align-items: center;
+								flex-direction: column;
+								background-color: gray;
+							`}
+						>
+							<div>{/* swiper */}</div>
+							<div>{/* trans parent absolute swiper navigation */}</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			<footer
 				className={css`
 					display: flex;
-					justify-content: space-between;
+					justify-content: center;
 					align-items: center;
-					max-width: 940px;
-					margin-left: auto;
-					margin-right: auto;
-					height: 60px;
+					width: 100%;
+					height: 276px;
+					background-color: black;
+					color: white;
 				`}
 			>
-				<div>mpco</div>
-				<div>
-					<Button>버튼1</Button>
-					<Button>버튼2</Button>
-				</div>
-			</nav>
-			{/* main banner */}
-			<section>
 				<div
 					className={css`
-						display: flex;
-						width: 100%;
-						height: 600px;
-						justify-content: center;
-						align-items: center;
-						background-color: gray;
-					`}
-				>
-					<div>
-						<div>
-							<h1>This is velocity</h1>
-						</div>
-						<div>
-							<h3>A FREE RESPONSIVE TEMPLATE</h3>
-						</div>
-						<div
-							className={css`
-								display: flex;
-							`}
-						>
-							<Button>Get Started</Button>
-							<Button>Learn More</Button>
-						</div>
-					</div>
-				</div>
-			</section>
-			{/* card section */}
-			<section>
-				<div
-					className={css`
-						display: flex;
-						justify-content: center;
-						align-items: center;
-						width: 100%;
-						height: 580px;
-						background-color: orange;
-						padding: 80px 10px;
+						width: 960px;
+						height: 100%;
+						padding: 40px 0px;
 					`}
 				>
 					<div
 						className={css`
-							display: flex;
-							justify-content: center;
-							align-items: center;
-							flex-direction: column;
-							width: 940px;
+							width: 100%;
+							height: 80px;
+							border-bottom: 1px solid gray;
+							margin-bottom: 20px;
 						`}
 					>
-						<h2>what we do</h2>
-						<h5>this is text</h5>
-						<div
-							className={css`
-								display: flex;
-								background-color: white;
-							`}
-						>
-							<WhatWeDoCard />
-							<WhatWeDoCard />
-							<WhatWeDoCard />
-						</div>
+						ghfgh
 					</div>
-				</div>
-			</section>
-			{/* service section */}
-			<section>
-				<div
-					className={css`
-						width: 100%;
-						height: 820px;
-						display: flex;
-						justify-content: center;
-						padding: 80px 10px;
-						background-color: blue;
-					`}
-				>
 					<div
 						className={css`
 							display: flex;
-							justify-content: center;
-							align-items: center;
-							flex-direction: column;
+							width: 100%;
+							height: 100px;
 						`}
 					>
-						<h2>our services</h2>
-						<h5>text</h5>
 						<div
 							className={css`
-								display: flex;
-								background-color: white;
+								width: 580px;
 							`}
 						>
-							<ServiceCard />
-							<ServiceCard />
+							<p
+								className={css`
+									margin-bottom: 10px;
+								`}
+							>
+								회사명 : 주식회사 대웅이티 ㅣ 대표 : 전희충 ㅣ 사업자 등록번호 : 333-88-01232 ㅣ
+								주소 : 부산광역시 강서구 화전산단3로 90 ㅣ 전화 : 051-715-3435ㅣ 팩스 :
+								051-715-3436ㅣ E-MAIL : dwet@dwet.kr
+							</p>
+							<p>© COPYRIGHT 2024 HYUNDAI MOTOR GROUP, ALL RIGHTS RESERVED.</p>
 						</div>
 					</div>
+					<div />
 				</div>
-			</section>
-		</div>
+			</footer>
+		</>
 	);
 };
 
