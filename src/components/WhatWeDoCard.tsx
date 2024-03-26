@@ -6,26 +6,21 @@ const WhatWeDoCard = () => {
 	return (
 		<div
 			className={css`
-				width: 290px;
-				height: 320px;
-				margin: 0px 10px;
-				padding: 15px;
+				width: 320px;
+				height: 426px;
 				border-radius: 4px;
 				border: 1px solid pink;
+				overflow: hidden;
 			`}
 		>
-			<div
+			<img
 				className={css`
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					width: 100%;
-					height: 200px;
 					background-color: gray;
 				`}
-			>
-				<img width={100} height={100} alt="ie" />
-			</div>
+				width={320}
+				height={240}
+				alt="ie"
+			/>
 			<div
 				className={css`
 					display: flex;

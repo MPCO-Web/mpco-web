@@ -3,7 +3,8 @@ import React from 'react';
 import { css } from '@emotion/css';
 import { Button } from '@mui/material';
 
-import WhatWeDoCard from '@components/WhatWeDoCard';
+import SwiperTest from '@components/SwiperTest';
+import WhatWeDoSwiperList from '@components/WhatWeDoSwiperList';
 
 const HomePage = () => {
 	// tailwindcss classes
@@ -69,7 +70,7 @@ const HomePage = () => {
 							justify-content: center;
 							align-items: center;
 							width: 100%;
-							height: 580px;
+							height: 800px;
 							background-color: orange;
 							padding: 80px 10px;
 						`}
@@ -80,22 +81,13 @@ const HomePage = () => {
 								justify-content: center;
 								align-items: center;
 								flex-direction: column;
-								width: 940px;
+								width: 1400px;
+								overflow: hidden;
 							`}
 						>
 							<h2>what we do</h2>
 							<h5>this is text</h5>
-							<div
-								className={css`
-									display: flex;
-									background-color: white;
-								`}
-							>
-								<WhatWeDoCard />
-								<WhatWeDoCard />
-								<WhatWeDoCard />
-								<WhatWeDoCard />
-							</div>
+							<WhatWeDoSwiperList />
 						</div>
 					</div>
 				</section>
@@ -110,20 +102,7 @@ const HomePage = () => {
 							padding: 80px 10px;
 						`}
 					>
-						<div
-							className={css`
-								display: flex;
-								width: 1080px;
-								height: 100%;
-								justify-content: center;
-								align-items: center;
-								flex-direction: column;
-								background-color: gray;
-							`}
-						>
-							<div>{/* swiper */}</div>
-							<div>{/* trans parent absolute swiper navigation */}</div>
-						</div>
+						<SwiperTest />
 					</div>
 				</section>
 			</main>
