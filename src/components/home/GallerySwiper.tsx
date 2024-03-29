@@ -9,7 +9,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-const SwiperTest = () => {
+const GallerySwiper: React.FC = () => {
 	return (
 		<Swiper
 			className={css`
@@ -64,4 +64,4 @@ const SwiperTest = () => {
 	);
 };
 
-export default SwiperTest;
+export default GallerySwiper;

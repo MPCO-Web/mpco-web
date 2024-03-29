@@ -3,8 +3,9 @@ import React from 'react';
 import { css } from '@emotion/css';
 import { Button } from '@mui/material';
 
-import SwiperTest from '@components/SwiperTest';
-import WhatWeDoSwiperList from '@components/WhatWeDoSwiperList';
+import MainNav from '@components/common/MainNav';
+import GallerySwiper from '@components/home/GallerySwiper';
+import WhatWeDoSwiperList from '@components/home/WhatWeDoSwiperList';
 
 const HomePage = () => {
 	// tailwindcss classes
@@ -13,26 +14,7 @@ const HomePage = () => {
 		<>
 			<header>
 				{/* main nav */}
-				<nav
-					className={css`
-						display: flex;
-						justify-content: space-between;
-						align-items: center;
-						max-width: 940px;
-						margin-left: auto;
-						margin-right: auto;
-						height: 60px;
-					`}
-				>
-					<div>mpco</div>
-					<div>
-						<Button>HOME</Button>
-						<Button>회사소개</Button>
-						<Button>사업분야</Button>
-						<Button>연구분야</Button>
-						<Button>게시판</Button>
-					</div>
-				</nav>
+				<MainNav />
 			</header>
 			<main>
 				{/* main banner */}
@@ -105,7 +87,7 @@ const HomePage = () => {
 							padding: 80px 10px;
 						`}
 					>
-						<SwiperTest />
+						<GallerySwiper />
 					</div>
 				</section>
 			</main>
