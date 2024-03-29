@@ -26,8 +26,11 @@ const HomePage = () => {
 				>
 					<div>mpco</div>
 					<div>
-						<Button>버튼1</Button>
-						<Button>버튼2</Button>
+						<Button>HOME</Button>
+						<Button>회사소개</Button>
+						<Button>사업분야</Button>
+						<Button>연구분야</Button>
+						<Button>게시판</Button>
 					</div>
 				</nav>
 			</header>
