@@ -77,29 +77,21 @@ const MainNav = () => {
 					align-items: center;
 				`}
 			>
-				<MainNavButton
-					title="home"
-					subMenu={[
-						{
-							title: 'sub1',
-							path: '/sub1',
-						},
-						{
-							title: 'sub2',
-							path: '/sub2',
-						},
-					]}
-				/>
+				<MainNavButton title="home" subMenu={[]} />
 				<MainNavButton
 					title="회사소개"
 					subMenu={[
 						{
-							title: 'sub1',
+							title: '인사말',
 							path: '/sub1',
 						},
 						{
-							title: 'sub2',
+							title: '연혁 및 조직도',
 							path: '/sub2',
+						},
+						{
+							title: '오시는 길',
+							path: '/sub3',
 						},
 					]}
 				/>
@@ -107,11 +99,11 @@ const MainNav = () => {
 					title="사업분야"
 					subMenu={[
 						{
-							title: 'sub1',
+							title: '사업소개',
 							path: '/sub1',
 						},
 						{
-							title: 'sub2',
+							title: '생산제품',
 							path: '/sub2',
 						},
 					]}
@@ -120,11 +112,11 @@ const MainNav = () => {
 					title="연구분야"
 					subMenu={[
 						{
-							title: 'sub1',
+							title: '인증서',
 							path: '/sub1',
 						},
 						{
-							title: 'sub2',
+							title: '설비',
 							path: '/sub2',
 						},
 					]}
@@ -133,11 +125,11 @@ const MainNav = () => {
 					title="게시판"
 					subMenu={[
 						{
-							title: 'sub1',
+							title: 'NEWS',
 							path: '/sub1',
 						},
 						{
-							title: 'sub2',
+							title: '공지사항',
 							path: '/sub2',
 						},
 					]}
