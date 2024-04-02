@@ -5,6 +5,7 @@ import GreetingsPage from '@about/pages/GreetingsPage';
 import HistoryPage from '@about/pages/HistoryPage';
 import LocationPage from '@about/pages/LocationPage';
 import OrganizationPage from '@about/pages/OrganizationPage';
+import NotFoundPage from '@common/pages/NotFoundPage';
 import PageLayout from '@common/templates/page-templates/PageLayout';
 import HomePage from '@home/pages/HomePage';
 import EquipmentsPage from '@research-area/pages/EquipmentsPage';
@@ -35,6 +36,7 @@ const App: React.FC = () => {
 						<Route path="license" element={<LicensePage />} />
 						<Route path="equipments" element={<EquipmentsPage />} />
 					</Route>
+					<Route path="*" element={<NotFoundPage />} />
 				</Route>
 			</Routes>
 		</BrowserRouter>

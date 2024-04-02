@@ -7,12 +7,23 @@ import MainNav from '@common/components/MainNav';
 
 const PageLayout: React.FC = () => {
 	return (
-		<div>
+		<div
+			className={css`
+				display: flex;
+				flex-direction: column;
+				min-height: 100vh;
+			`}
+		>
 			<header>
 				{/* main nav */}
 				<MainNav />
 			</header>
-			<main>
+			<main
+				className={css`
+					width: 100%;
+					flex: 1;
+				`}
+			>
 				<Outlet />
 			</main>
 			<footer
