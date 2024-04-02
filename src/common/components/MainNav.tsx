@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { css } from '@emotion/css';
 import { Button } from '@mui/material';
@@ -8,24 +9,45 @@ interface ISubMenuItem {
 	path: string;
 }
 
-interface MainNavButtonProps {
+interface MainNavMenuProps {
 	title: string;
+	path: string;
 	subMenu: ISubMenuItem[];
 }
 
-const MainNavButton: React.FC<MainNavButtonProps> = ({ title, subMenu }) => {
-	const [openMenu, setOpenMenu] = React.useState(false);
+const MainNavMenu: React.FC<MainNavMenuProps> = ({ title, path, subMenu }) => {
+	const navigate = useNavigate();
+	const [openMenu, setOpenMenu] = useState(false);
+
+	const handleLeaveMainNav = () => {
+		setOpenMenu(false);
+	};
+
+	const handleEnterMainMenuButton = () => {
+		setOpenMenu(true);
+	};
+
+	const handleClickMainMenuButton = () => {
+		setOpenMenu(false);
+		navigate(path);
+	};
+
+	const handleClickSubMenuButton = (subPath: string) => {
+		setOpenMenu(false);
+		navigate(`${path}/${subPath}`);
+	};
+
 	return (
 		<div
+			onMouseLeave={handleLeaveMainNav}
 			className={css`
 				position: relative;
 				height: 60px;
 			`}
 		>
 			<Button
-				onMouseEnter={() => setOpenMenu(true)}
-				onMouseLeave={() => setOpenMenu(false)}
-				onClick={() => setOpenMenu(!openMenu)}
+				onMouseEnter={handleEnterMainMenuButton}
+				onClick={handleClickMainMenuButton}
 				sx={{
 					width: '100%',
 					height: '100%',
@@ -49,7 +71,13 @@ const MainNavButton: React.FC<MainNavButtonProps> = ({ title, subMenu }) => {
 					`}
 				>
 					{subMenu.map((item) => (
-						<Button>{item.title}</Button>
+						<Button
+							onClick={() => {
+								handleClickSubMenuButton(item.path);
+							}}
+						>
+							{item.title}
+						</Button>
 					))}
 				</div>
 			)}
@@ -77,63 +105,73 @@ const MainNav = () => {
 					align-items: center;
 				`}
 			>
-				<MainNavButton title="home" subMenu={[]} />
-				<MainNavButton
+				<MainNavMenu title="home" path="/" subMenu={[]} />
+				<MainNavMenu
 					title="회사소개"
+					path="about"
 					subMenu={[
 						{
 							title: '인사말',
-							path: '/sub1',
+							path: 'greetings',
 						},
 						{
-							title: '연혁 및 조직도',
-							path: '/sub2',
+							title: '연혁',
+							path: 'history',
+						},
+						{
+							title: '조직도',
+							path: 'organization',
 						},
 						{
 							title: '오시는 길',
-							path: '/sub3',
+							path: 'location',
 						},
 					]}
 				/>
-				<MainNavButton
+				<MainNavMenu
 					title="사업분야"
+					path="work-area"
 					subMenu={[
 						{
 							title: '사업소개',
-							path: '/sub1',
+							path: 'work',
 						},
 						{
 							title: '생산제품',
-							path: '/sub2',
+							path: 'products',
 						},
 					]}
 				/>
-				<MainNavButton
+				<MainNavMenu
 					title="연구분야"
+					path="research-area"
 					subMenu={[
 						{
 							title: '인증서',
-							path: '/sub1',
+							path: 'license',
 						},
 						{
 							title: '설비',
-							path: '/sub2',
+							path: 'equipments',
 						},
 					]}
 				/>
+				{/*
 				<MainNavButton
 					title="게시판"
+					path="board"
 					subMenu={[
 						{
 							title: 'NEWS',
-							path: '/sub1',
+							path: 'sub1',
 						},
 						{
 							title: '공지사항',
-							path: '/sub2',
+							path: 'sub2',
 						},
 					]}
 				/>
+				*/}
 			</div>
 		</nav>
 	);

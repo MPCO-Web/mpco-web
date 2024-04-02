@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 * {
+	user-select: none;
 	box-sizing: border-box;
 }
 
