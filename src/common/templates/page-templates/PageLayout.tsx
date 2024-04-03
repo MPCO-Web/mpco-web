@@ -4,6 +4,7 @@ import { Outlet } from 'react-router-dom';
 import { css } from '@emotion/css';
 
 import MainNav from '@common/components/MainNav';
+import { SM_PAGE_MAX_WIDTH, XL_PAGE_MAX_WIDTH } from '@common/constants/style';
 
 const PageLayout: React.FC = () => {
 	return (
@@ -12,11 +13,27 @@ const PageLayout: React.FC = () => {
 				display: flex;
 				flex-direction: column;
 				min-height: 100vh;
+				overflow: hidden;
 			`}
 		>
-			<header>
+			<header
+				className={css`
+					display: flex;
+					justify-content: center;
+					width: 100%;
+					height: 80px;
+					background-color: g;
+				`}
+			>
 				{/* main nav */}
-				<MainNav />
+				<div
+					className={css`
+						width: 100%;
+						max-width: ${XL_PAGE_MAX_WIDTH}px;
+					`}
+				>
+					<MainNav />
+				</div>
 			</header>
 			<main
 				className={css`
@@ -39,7 +56,8 @@ const PageLayout: React.FC = () => {
 			>
 				<div
 					className={css`
-						width: 960px;
+						width: 100%;
+						max-width: ${XL_PAGE_MAX_WIDTH}px;
 						height: 100%;
 						padding: 40px 0px;
 					`}
@@ -63,7 +81,8 @@ const PageLayout: React.FC = () => {
 					>
 						<div
 							className={css`
-								width: 580px;
+								width: 100%;
+								max-width: ${SM_PAGE_MAX_WIDTH}px;
 							`}
 						>
 							<p

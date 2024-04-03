@@ -89,10 +89,11 @@ const MainNav = () => {
 	return (
 		<nav
 			className={css`
+				width: 100%;
+				height: 100%;
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
-				max-width: 940px;
 				margin-left: auto;
 				margin-right: auto;
 				height: 60px;
