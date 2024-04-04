@@ -11,7 +11,7 @@ const HomePage = () => {
 
 	return (
 		<>
-			<section>
+			<section className="w-full">
 				<div
 					className={css`
 						display: flex;
@@ -41,7 +41,7 @@ const HomePage = () => {
 				</div>
 			</section>
 			{/* card section */}
-			<section>
+			<section className="w-full max-w-screen-2xl mx-auto">
 				<div
 					className={css`
 						display: flex;
@@ -70,7 +70,7 @@ const HomePage = () => {
 				</div>
 			</section>
 			{/* service section */}
-			<section>
+			<section className="w-full max-w-screen-2xl mx-auto">
 				<div
 					className={css`
 						width: 100%;
@@ -78,6 +78,7 @@ const HomePage = () => {
 						display: flex;
 						justify-content: center;
 						padding: 80px 10px;
+						background-color: gray;
 					`}
 				>
 					<GallerySwiper />

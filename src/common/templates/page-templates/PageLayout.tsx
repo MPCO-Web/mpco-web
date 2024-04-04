@@ -4,17 +4,15 @@ import { Outlet } from 'react-router-dom';
 import { css } from '@emotion/css';
 
 import MainNav from '@common/components/MainNav';
-import { SM_PAGE_MAX_WIDTH, XL_PAGE_MAX_WIDTH } from '@common/constants/style';
 
 const PageLayout: React.FC = () => {
 	return (
 		<div
-			className={css`
-				display: flex;
-				flex-direction: column;
-				min-height: 100vh;
-				overflow: hidden;
-			`}
+			className="
+					flex flex-col
+					min-h-screen
+					overflow-hidden
+				"
 		>
 			<header
 				className={css`
@@ -26,12 +24,7 @@ const PageLayout: React.FC = () => {
 				`}
 			>
 				{/* main nav */}
-				<div
-					className={css`
-						width: 100%;
-						max-width: ${XL_PAGE_MAX_WIDTH}px;
-					`}
-				>
+				<div className="w-full max-w-screen-xl ">
 					<MainNav />
 				</div>
 			</header>
@@ -54,14 +47,7 @@ const PageLayout: React.FC = () => {
 					color: white;
 				`}
 			>
-				<div
-					className={css`
-						width: 100%;
-						max-width: ${XL_PAGE_MAX_WIDTH}px;
-						height: 100%;
-						padding: 40px 0px;
-					`}
-				>
+				<div className="w-full max-w-screen-xl">
 					<div
 						className={css`
 							width: 100%;
@@ -79,12 +65,7 @@ const PageLayout: React.FC = () => {
 							height: 100px;
 						`}
 					>
-						<div
-							className={css`
-								width: 100%;
-								max-width: ${SM_PAGE_MAX_WIDTH}px;
-							`}
-						>
+						<div className="w-full max-w-2xl">
 							<p
 								className={css`
 									margin-bottom: 10px;
