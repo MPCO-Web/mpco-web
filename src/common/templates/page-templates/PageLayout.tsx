@@ -56,26 +56,24 @@ const PageLayout: React.FC = () => {
 							margin-bottom: 20px;
 						`}
 					>
-						ghfgh
+						㈜ 엠피코
 					</div>
 					<div
 						className={css`
 							display: flex;
 							width: 100%;
 							height: 100px;
+							margin-bottom: 30px;
 						`}
 					>
 						<div className="w-full max-w-2xl">
-							<p
-								className={css`
-									margin-bottom: 10px;
-								`}
-							>
-								회사명 : 주식회사 대웅이티 ㅣ 대표 : 전희충 ㅣ 사업자 등록번호 : 333-88-01232 ㅣ
-								주소 : 부산광역시 강서구 화전산단3로 90 ㅣ 전화 : 051-715-3435ㅣ 팩스 :
-								051-715-3436ㅣ E-MAIL : dwet@dwet.kr
+							<p>
+								회사명 : ㈜ 엠피코 ㅣ 대표 : 김정희 ㅣ 사업자 등록번호 : 835-87-01139 <br />
+								주소 : 경상남도 김해시 생림면 생림대로 491 <br />
+								전화 : 055-345-8944ㅣ 팩스 : 055-345-8943ㅣ E-MAIL : mpco@m-pco.com
 							</p>
-							<p>© COPYRIGHT 2024 HYUNDAI MOTOR GROUP, ALL RIGHTS RESERVED.</p>
+							<br />
+							<p>© COPYRIGHT 2024 ㈜ 엠피코, ALL RIGHTS RESERVED.</p>
 						</div>
 					</div>
 					<div />

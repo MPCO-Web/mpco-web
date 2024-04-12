@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Banner from '../../components/Banner';
+import Banner from '@common/components/Banner';
 
 const OrganizationPage = () => {
 	return (

@@ -2,6 +2,8 @@ import React from 'react';
 
 import { css } from '@emotion/css';
 
+import test from '@common/assets/images/test.jpg';
+
 interface BannerProps {
 	text: string;
 }
@@ -16,10 +18,19 @@ const Banner: React.FC<BannerProps> = ({ text }) => {
 					height: 400px;
 					justify-content: center;
 					align-items: center;
-					background-color: gray;
+					overflow: hidden;
 				`}
 			>
-				<div>
+				<img width={4096} height={2160} src={test} alt="banner" />
+				<div
+					className={css`
+						position: absolute;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						color: white;
+					`}
+				>
 					<h1>{text}</h1>
 				</div>
 			</div>
