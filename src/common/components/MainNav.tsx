@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import { css } from '@emotion/css';
 import { Button } from '@mui/material';
 
+import mainRoutes from '@common/routes/Route';
+
 interface ISubMenuItem {
 	title: string;
 	path: string;
@@ -12,7 +14,7 @@ interface ISubMenuItem {
 interface MainNavMenuProps {
 	title: string;
 	path: string;
-	subMenu: ISubMenuItem[];
+	subMenu: ISubMenuItem[] | undefined;
 }
 
 const MainNavMenu: React.FC<MainNavMenuProps> = ({ title, path, subMenu }) => {
@@ -55,7 +57,7 @@ const MainNavMenu: React.FC<MainNavMenuProps> = ({ title, path, subMenu }) => {
 			>
 				{title}
 			</Button>
-			{openMenu && (
+			{subMenu && openMenu && (
 				<div
 					className={css`
 						position: absolute;
@@ -106,73 +108,19 @@ const MainNav = () => {
 					align-items: center;
 				`}
 			>
-				<MainNavMenu title="home" path="/" subMenu={[]} />
-				<MainNavMenu
-					title="회사소개"
-					path="about"
-					subMenu={[
-						{
-							title: '인사말',
-							path: 'greetings',
-						},
-						{
-							title: '연혁',
-							path: 'history',
-						},
-						{
-							title: '조직도',
-							path: 'organization',
-						},
-						{
-							title: '오시는 길',
-							path: 'location',
-						},
-					]}
-				/>
-				<MainNavMenu
-					title="사업분야"
-					path="work-area"
-					subMenu={[
-						{
-							title: '사업소개',
-							path: 'work',
-						},
-						{
-							title: '생산제품',
-							path: 'products',
-						},
-					]}
-				/>
-				<MainNavMenu
-					title="연구분야"
-					path="research-area"
-					subMenu={[
-						{
-							title: '인증서',
-							path: 'license',
-						},
-						{
-							title: '설비',
-							path: 'equipments',
-						},
-					]}
-				/>
-				{/*
-				<MainNavButton
-					title="게시판"
-					path="board"
-					subMenu={[
-						{
-							title: 'NEWS',
-							path: 'sub1',
-						},
-						{
-							title: '공지사항',
-							path: 'sub2',
-						},
-					]}
-				/>
-				*/}
+				{mainRoutes.map((route) => (
+					<MainNavMenu
+						key={route.path}
+						title={route.shortDisplayName || route.displayName}
+						path={route.path}
+						subMenu={route.children?.map((child) => {
+							return {
+								title: child.shortDisplayName || child.displayName,
+								path: child.path,
+							};
+						})}
+					/>
+				))}
 			</div>
 		</nav>
 	);
