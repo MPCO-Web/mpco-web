@@ -4,7 +4,6 @@ import { Outlet } from 'react-router-dom';
 import { css } from '@emotion/css';
 
 import MainNav from '@common/components/MainNav';
-import PageNav from '@common/components/PageNav';
 
 const PageLayout: React.FC = () => {
 	return (
@@ -35,7 +34,6 @@ const PageLayout: React.FC = () => {
 					flex: 1;
 				`}
 			>
-				<PageNav />
 				<Outlet />
 			</main>
 			<footer
