@@ -52,12 +52,53 @@ const GreetingsPage = () => {
 			</section>
 			<Banner text="MPCO에 방문해 주셔서 감사합니다." />
 			<section className="w-full max-w-screen-xl mx-auto">
-				<h3>인사말</h3>
-				<p>
-					안녕하세요. MPCO는 미래의 세계를 위해 노력하는 기업입니다. 저희는 기술을 통해 사람들의
-					삶을 더 편리하고 행복하게 만들기 위해 노력하고 있습니다. 미래에는 더 많은 사람들이 MPCO를
-					통해 더 행복해지길 바랍니다.
-				</p>
+				<div
+					className={css`
+						width: 100%;
+						padding: 60px 0px;
+					`}
+				>
+					<div
+						className={css`
+							width: 100%;
+							display: flex;
+						`}
+					>
+						<div
+							className={css`
+								flex: 0 0 400px;
+							`}
+						>
+							<Typography variant="h5">기술혁신으로</Typography>
+							<Typography variant="h5">더 나은 내일을 위해</Typography>
+							<Typography variant="h5">전진하겠습니다.</Typography>
+						</div>
+						<div
+							className={css`
+								flex: 1 1 auto;
+							`}
+						>
+							<Typography
+								sx={{
+									whiteSpace: 'pre-line',
+								}}
+							>
+								{`안녕하세요.
+								MPCO는 미래의 세계를 위해 노력하는 기업입니다.
+								저희는 기술을 통해사람들의 삶을 더 편리하고 행복하게 만들기 위해 노력하고 있습니다. 미래에는 더 많은 사람들이 MPCO를 통해 더 행복해지길 바랍니다. 
+								
+								안녕하세요. MPCO는 미래의 세계를 위해
+								노력하는 기업입니다. 저희는 기술을 통해 사람들의 삶을 더 편리하고 행복하게 만들기
+								위해 노력하고 있습니다. 미래에는 더 많은 사람들이 MPCO를 통해 더 행복해지길
+								바랍니다. 
+								
+								안녕하세요. MPCO는 미래의 세계를 위해 노력하는 기업입니다. 저희는 기술을
+								통해 사람들의 삶을 더 편리하고 행복하게 만들기 위해 노력하고 있습니다. 미래에는 더
+								많은 사람들이 MPCO를 통해 더 행복해지길 바랍니다.`}
+							</Typography>
+						</div>
+					</div>
+				</div>
 			</section>
 		</>
 	);
